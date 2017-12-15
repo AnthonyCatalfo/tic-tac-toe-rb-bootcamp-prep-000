@@ -60,6 +60,7 @@ def winner(board)
   end
 
 end
+
 def move(array,index,value)
   array[index] = value
 end
@@ -69,7 +70,7 @@ def turn(board)
    puts "Please enter 1-9:"
    index=input_to_index(gets)
     if valid_move?(board,index)
-       move(board, index, value)
+       move(board, index, current_player(board))
        display_board(board)
        return
     end
