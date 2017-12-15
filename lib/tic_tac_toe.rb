@@ -58,7 +58,7 @@ def winner(board)
   end
 
 end
-def move(array,index,value="X")
+def move(array,index,value)
   array[index] = value
 end
 
