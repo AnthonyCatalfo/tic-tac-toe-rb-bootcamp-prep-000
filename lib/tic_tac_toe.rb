@@ -74,7 +74,7 @@ def turn(board)
   end
 end
 def turn_count(board)
-  arr = board.reject { |e| (e === " " || e === nil) } 
+  arr = board.reject { |e| (e === " " || e === nil) }
    return arr.length
  end
  def current_player(board)
@@ -86,13 +86,11 @@ def turn_count(board)
  def play()
   while ! over?(board)
     turn(board)
-  end 
-  if  won?(board)
-    winner(board)
   end
+  if  won?(board)
+  puts "Congratulations #{winner(board)}!"
+  end
+  if  draw?(board)
+   puts  "Cat's Game!"
  end
-
-
-
-
-
+ end
