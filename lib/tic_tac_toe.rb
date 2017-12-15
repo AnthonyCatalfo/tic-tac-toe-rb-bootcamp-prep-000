@@ -74,5 +74,25 @@ def turn(board)
   end
 end
 def turn_count(board)
-  
-  
+  arr = board.reject { |e| (e === " " || e === nil) } 
+   return arr.length
+ end
+ def current_player(board)
+   if  turn_count(board) % 2===0
+     return "X"
+   end
+   return "O"
+ end
+ def play()
+  while ! over?(board)
+    turn(board)
+  end 
+  if  won?(board)
+    winner(board)
+  end
+ end
+
+
+
+
+
