@@ -60,6 +60,7 @@ def winner(board)
 end
 def move(array,index,value)
   array[index] = value
+  binding.pry
 end
 
 def turn(board)
