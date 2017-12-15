@@ -83,7 +83,7 @@ def turn_count(board)
    end
    return "O"
  end
- def play()
+ def play(board)
   while ! over?(board)
     turn(board)
   end
